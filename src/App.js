@@ -33,6 +33,7 @@ class App extends Component {
         this.setState({
           result: y.artObjects,
         });
+        console.log(y.artObjects)
     });
   }
 

@@ -11,15 +11,21 @@ class PictureResult extends Component {
             <div className="picturePanel" >
                 <div className="headerPicture">
                     {this.props.keyword} 
-                    <div style = {{ fontSize: '24px', display: 'inline'}}> 
-                        { this.props.result.length>1? ' ( ' + this.props.result.length + ` results )` : 
-                            this.props.result.length == 1 ? ' ( ' + this.props.result.length + ` result )`: ''}
-                    </div>
+                    {this.props.keyword && <div style = {{ fontSize: '24px', display: 'inline'}}> { this.props.result.length>1? ' ( ' + this.props.result.length + ` results )` : ' ( ' + this.props.result.length + ` result )`}</div>}
                 </div> 
                 {
                     this.props.result.map((item) => {
                         return (
-                           <img className="pictureItem" src={item.webImage && item.webImage.url? item.webImage.url: 'https://d1nhio0ox7pgb.cloudfront.net/_img/o_collection_png/green_dark_grey/512x512/plain/sign_forbidden.png'} />
+                            
+                            <div className="pictureItem">
+                                <div className="pictureDetail">
+                                    <div className="detailLine">title: {item.title? item.title: '-'}</div>
+                                    <div className="detailLine">production place: {item.productionPlaces.length>0? item.productionPlaces.join(','): '-'}</div>
+                                    <div className="detailLine">principal: {item.principalOrFirstMaker? item.principalOrFirstMaker: '-'}</div>
+                                    <a href={item.links.web} className="detailLink">...More...</a>
+                                </div>
+                                <img className="picture" src={item.webImage && item.webImage.url? item.webImage.url: 'https://d1nhio0ox7pgb.cloudfront.net/_img/o_collection_png/green_dark_grey/512x512/plain/sign_forbidden.png'} />
+                            </div>
                         );
                     })
                 }
@@ -28,4 +34,4 @@ class PictureResult extends Component {
         );
     }
 }
-export default PictureResult
+export default PictureResult;
