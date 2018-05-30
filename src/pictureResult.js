@@ -10,8 +10,13 @@ class PictureResult extends Component {
         return(
             <div className="picturePanel" >
                 <div className="headerPicture">
-                    {this.props.keyword} 
-                    {this.props.keyword && <div style = {{ fontSize: '24px', display: 'inline'}}> { this.props.result.length>1? ' ( ' + this.props.result.length + ` results )` : ' ( ' + this.props.result.length + ` result )`}</div>}
+                    { this.props.keyword } 
+                    { this.props.loading && <div style = {{ fontSize: '24px', display: 'inline'}}> ( loading )</div> }
+                    { !this.props.loading && this.props.keyword &&
+                        <div style = {{ fontSize: '24px', display: 'inline'}}> 
+                            { this.props.result.length>1? ' ( ' + this.props.result.length + ` results )` : ' ( ' + this.props.result.length + ` result )`}
+                        </div> 
+                    }
                 </div> 
                 {
                     this.props.result.map((item) => {

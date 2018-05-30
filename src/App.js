@@ -14,6 +14,7 @@ class App extends Component {
       keyword: '',
       result: [],
       recommend: [],
+      loading: false,
     }
     this.onChange = this.onChange.bind(this);
 
@@ -21,7 +22,8 @@ class App extends Component {
   }
   onChange(newKeyword) {
     this.setState({
-      keyword: newKeyword
+      keyword: newKeyword,
+      loading: true,
     });
     this.search(newKeyword);
   }
@@ -32,6 +34,7 @@ class App extends Component {
     }).then( y => {
         this.setState({
           result: y.artObjects,
+          loading: false,
         });
         console.log(y.artObjects)
     });
@@ -43,7 +46,7 @@ class App extends Component {
       <div className="App" style={{padding: '5%'}}>
         <img src="http://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/RIJKSMUSEUMLOGO_zwart_mw.jpg" style={{width: '40%', marginBottom: '40px'}} />
         <SearchPanel onChange={this.onChange} />
-        <PictureResult keyword={this.state.keyword} result={this.state.result} />
+        <PictureResult keyword={this.state.keyword} result={this.state.result} loading={this.state.loading}/>
         <Recommandation />
       </div>
     );
