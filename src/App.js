@@ -23,11 +23,11 @@ class App extends Component {
     this.setState({
       keyword: newKeyword
     });
-    this.search();
+    this.search(newKeyword);
   }
 
-  search() {
-    fetch('https://www.rijksmuseum.nl/api/nl/collection?q=' + this.state.keyword + '&key=fpGQTuED&format=json').then( x => { 
+  search(newKeyword) {
+    fetch('https://www.rijksmuseum.nl/api/nl/collection?q=' + newKeyword + '&key=fpGQTuED&format=json&ps=100').then( x => { 
         return x.json();
     }).then( y => {
         this.setState({
