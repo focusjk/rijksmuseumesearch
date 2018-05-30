@@ -1,31 +1,4 @@
-.searchPanel {
-    width: 90%;
-    height: 72px;
-    background-color: rgba(227,180,170,1);
-    padding:12px 5% 12px 5%;
-    border-radius: 5px;
-    display: flex;
-    align-items: left;
-}
-.searchInput {
-    font-size: 16px;
-    border-radius: 5px;
-    border: 0px;
-    padding-left: 16px; 
-    margin: 8px;
-    width: 40%;
-    font-family: Courier;
-}
-.searchButton {
-    font-size: 16px;
-    border-radius: 5px;
-    border: 0px;
-    padding: 8px 16px 8px 16px;
-    margin: 8px 0 8px 18px;
-    background-color: rgb(150,97,95);
-    color: white;
-    font-family: Courier;
-}
+
 .picturePanel {
     width: 90%;
     background-color: rgb(255,212,159);
