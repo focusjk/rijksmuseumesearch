@@ -24,7 +24,13 @@ class SearchPanel extends Component {
     render() {
         return(
             <div className="searchPanel">
-                <input className="searchInput" type="text" ref="keyword" placeholder="ex. puppy" onKeyDown={(e) => this.onKeyDown(e)}>
+                <input  
+                    className="searchInput" 
+                    type="text" 
+                    ref="keyword" 
+                    placeholder="ex. puppy" 
+                    onKeyDown={(e) => this.onKeyDown(e)}
+                >
                 </input>
 
                 <button className="searchButton" onClick={() => this.sendKeyword()}>

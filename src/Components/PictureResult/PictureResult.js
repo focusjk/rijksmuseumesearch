@@ -9,19 +9,19 @@ class PictureResult extends Component {
     render() {
         return(
             <div className="picturePanel" >
-                <div className="headerPicture">
-                    { this.props.keyword } 
-                    { this.props.loading && <div style = {{ fontSize: '24px', display: 'inline'}}> ( loading )</div> }
-                    { !this.props.loading && this.props.keyword &&
-                        <div style = {{ fontSize: '24px', display: 'inline'}}> 
-                            { this.props.result.length>1? ' ( ' + this.props.result.length + ` results )` : ' ( ' + this.props.result.length + ` result )`}
-                        </div> 
-                    }
-                </div> 
+                <div className="header">
+                    <div className="keyword">{ this.props.keyword }</div>
+                    <div className="smallKeyword">
+                        { this.props.loading? ' ( loading )' : 
+                            this.props.keyword? this.props.result.length>1? ' ( ' + this.props.result.length + ` results )` : 
+                                ' ( ' + this.props.result.length + ` result )` :
+                            ''
+                        }
+                    </div>
+                </div>
                 {
                     this.props.result.map((item) => {
                         return (
-                            
                             <div className="pictureItem">
                                 <div className="pictureDetail">
                                     <div className="detailLine">title: {item.title? item.title: '-'}</div>
