@@ -1,4 +1,4 @@
-import './style.scss';
+import './style.css';
 
 import React, { Component } from 'react';
 
