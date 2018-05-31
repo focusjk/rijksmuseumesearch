@@ -31,17 +31,20 @@
         position: relative;
         overflow: scroll;
         font-size: 2vw;
-
+        &:hover {
+            .pictureDetail{
+            z-index: 1;
+            }
+            .picture {
+                opacity: 0.3;
+            }
+        }
         .pictureDetail { 
-            /* picturedetail vs detail*/
             margin: 1.5vw;
             position: absolute;
             z-index: -1;
             text-align: left;
             top: 1;
-            &:hover {
-                z-index: 1; /* hover doesnot work*/
-            }
 
             .detailLine {
                 margin-bottom: 16px;
