@@ -1,61 +1,50 @@
 .picturePanel {
-    width: 90%;
-    background-color: rgb(255,212,159);
-    border-radius: 5px;
-    margin-top: 16px;
-    padding: 18px 5% 18px 5%;
-    grid-template-columns: 30% 30% 30%;
-    grid-gap: 10px 5%;
-    display: grid;
-}
-.header {
+  width: 90%;
+  background-color: #ffd49f;
+  border-radius: 5px;
+  margin-top: 16px;
+  padding: 18px 5% 18px 5%;
+  grid-template-columns: 30% 30% 30%;
+  grid-gap: 10px 5%;
+  display: grid; }
+  .picturePanel .header {
     grid-column-start: 1;
     grid-column-end: 4;
     height: 5vw;
     border-bottom: 3px solid white;
-    text-align: left;
-}
-.keyword {
-    font-size: 4.5vw; 
-    font-weight: bold;
-    display: inline;
-}
-.smallKeyword {
-    font-size: 2.5vw;
-    display: inline;
-}
-
-.pictureDetail {
-    margin: 1.5vw;
-    position: absolute;
-    z-index: -1;
-    text-align: left;
-    top: 1;
-}
-.pictureItem {
+    text-align: left; }
+    .picturePanel .header .keyword {
+      font-size: 4.5vw;
+      font-weight: bold;
+      display: inline; }
+    .picturePanel .header .smallKeyword {
+      font-size: 2.5vw;
+      display: inline; }
+  .picturePanel .pictureItem {
     position: relative;
     overflow: scroll;
-    font-size: 2vw;
-}
-.picture {
-    height: 40vw;
-    width: 100%;
-    object-fit: cover;
-}
-.pictureItem:hover .picture{
-    opacity: 0.3;
-    
-}
-.pictureItem:hover .pictureDetail{
-    z-index: 1;
-}
-.detailLine {
-    margin-bottom: 16px;
-}
-.detailLink {
-    width: 100%;
-    color: white;
-    background-color: black;
-    border-radius: 2px; 
-    padding: 5px;
-}
+    font-size: 2vw; }
+    .picturePanel .pictureItem:hover .pictureDetail {
+      z-index: 1; }
+    .picturePanel .pictureItem:hover .picture {
+      opacity: 0.3; }
+    .picturePanel .pictureItem .pictureDetail {
+      margin: 1.5vw;
+      position: absolute;
+      z-index: -1;
+      text-align: left;
+      top: 1; }
+      .picturePanel .pictureItem .pictureDetail .detailLine {
+        margin-bottom: 16px; }
+      .picturePanel .pictureItem .pictureDetail .detailLink {
+        width: 100%;
+        color: white;
+        background-color: black;
+        border-radius: 2px;
+        padding: 5px; }
+    .picturePanel .pictureItem .picture {
+      height: 40vw;
+      width: 100%;
+      object-fit: cover; }
+      .picturePanel .pictureItem .picture:hover {
+        opacity: 0.3; }

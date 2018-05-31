@@ -1,30 +1,27 @@
 .searchPanel {
-    width: 90%;
-    height: 72px;
-    background-color: rgba(227, 180, 170, 1);
-    padding: 12px 5% 12px 5%;
-    border-radius: 5px;
-    display: flex;
-    align-items: left;
-}
-.searchInput {
+  width: 90%;
+  height: 72px;
+  background-color: #e3b4aa;
+  padding: 12px 5% 12px 5%;
+  border-radius: 5px;
+  display: flex;
+  align-items: left; }
+  .searchPanel .searchInput {
     font-size: 16px;
     border-radius: 5px;
     border: 0px;
-    padding-left: 16px; 
+    padding-left: 16px;
     margin: 8px;
     width: 40%;
-    font-family: Courier;
-}
-.searchButton {
+    font-family: Courier; }
+  .searchPanel .searchButton {
     font-size: 16px;
     border-radius: 5px;
     border: 0px;
     width: 10vw;
     padding: 8px 0px 8px 0px;
     margin: 8px 0 8px 2vw;
-    background-color: rgb(150, 97, 95);
+    background-color: #96615f;
     color: white;
     font-family: Courier;
-    overflow: hidden;
-}
+    overflow: hidden; }
