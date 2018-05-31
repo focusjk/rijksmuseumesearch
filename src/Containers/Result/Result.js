@@ -10,27 +10,23 @@ class Result extends Component {
             loading: null,
         
         };
-        this.componentWillUpdate = this.componentWillUpdate.bind(this);
         this.componentDidUpdate = this.componentDidUpdate.bind(this);
     }
-    componentWillUpdate(prevProps){
+
+    componentDidUpdate(prevProps) {
         if(prevProps.keyword !== this.props.keyword) {
             this.setState({
                 loading: true,
             });
-        }
-    }
-    componentDidUpdate(prevProps) {
-        fetch('https://www.rijksmuseum.nl/api/nl/collection?q=' + this.props.keyword + '&key=fpGQTuED&format=json&ps=100').then( x => { 
-            return x.json();
-        }).then( y => {
-            if(prevProps.keyword !== this.props.keyword) {
+            fetch('https://www.rijksmuseum.nl/api/nl/collection?q=' + this.props.keyword + '&key=fpGQTuED&format=json&ps=100').then( x => { 
+                return x.json();
+            }).then( y => {
                 this.setState({
                     result: y.artObjects,
                     loading: false,
                 });
-            } 
-        });
+            });
+        }
     }
     render(){
         return(
