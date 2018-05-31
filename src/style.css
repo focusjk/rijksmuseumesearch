@@ -1,4 +1,4 @@
-.searchPanel {
+/* .searchPanel {
     width: 90%;
     height: 72px;
     background-color: rgba(227,180,170,1);
@@ -6,8 +6,8 @@
     border-radius: 5px;
     display: flex;
     align-items: left;
-}
-.searchInput {
+} */
+/* .searchInput {
     font-size: 16px;
     border-radius: 5px;
     border: 0px;
@@ -25,13 +25,9 @@
     background-color: rgb(150,97,95);
     color: white;
     font-family: Courier;
-}
+} */
 .picturePanel {
-    width: 90%;
-    background-color: rgb(255,212,159);
-    border-radius: 5px;
-    margin-top: 16px;
-    padding: 18px 5% 18px 5%;
+    width: 100%;
     grid-template-columns: 30% 30% 30%;
     grid-gap: 10px 5%;
     display: grid;
