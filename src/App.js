@@ -2,9 +2,8 @@ import './App.css';
 
 import React, { Component } from 'react';
 
-import PictureResult from './pictureResult';
-import Recommandation from './recommandation';
-import SearchPanel from './searchPanel';
+import PictureResult from './Components/PictureResult';
+import SearchPanel from './Components/SearchPanel';
 import logo from './logo.svg';
 
 class App extends Component {
@@ -43,11 +42,10 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App" style={{padding: '5%'}}>
-        <img src="http://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/RIJKSMUSEUMLOGO_zwart_mw.jpg" style={{width: '40%', marginBottom: '40px'}} />
+      <div className="App">
+        <img src="http://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/RIJKSMUSEUMLOGO_zwart_mw.jpg" style={{width: '40%', marginBottom: '30px'}} />
         <SearchPanel onChange={this.onChange} />
         <PictureResult keyword={this.state.keyword} result={this.state.result} loading={this.state.loading}/>
-        <Recommandation />
       </div>
     );
   }
