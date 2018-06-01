@@ -6,7 +6,8 @@
   padding: 18px 5% 18px 5%;
   grid-template-columns: 30% 30% 30%;
   grid-gap: 10px 5%;
-  display: grid; }
+  display: grid;
+  font-family: Courier; }
   .picturePanel .header {
     grid-column-start: 1;
     grid-column-end: 4;
