@@ -30,6 +30,9 @@ storiesOf('PictureResult', module)
   .add('PictureResult', () => (
     <PictureResult result={data} loading={false} keyword={'keyword'}/>
   ))
+  .add('PictureResult Loading', () => (
+    <PictureResult result={data} loading={true} keyword={'keyword'}/>
+  ))
   .add('PctureItem', () => (
     <div style={{width : '30%'}}><PictureItem item={data[1]} /></div>
   ));
