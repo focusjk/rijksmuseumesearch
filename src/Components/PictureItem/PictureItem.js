@@ -9,7 +9,7 @@ const Item = styled.div`
     position: relative;
     overflow: hidden;
     &:hover {
-        img DetailPicture { 
+        img { 
             opacity: 0.3;
         }
         div {
