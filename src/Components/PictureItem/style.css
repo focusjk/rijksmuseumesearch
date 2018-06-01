@@ -1,0 +1,29 @@
+.pictureItem {
+  position: relative;
+  overflow: scroll;
+  font-size: 2vw;
+  font-family: Courier; }
+  .pictureItem:hover .pictureDetail {
+    z-index: 1; }
+  .pictureItem:hover .picture {
+    opacity: 0.3; }
+  .pictureItem .pictureDetail {
+    margin: 1.5vw;
+    position: absolute;
+    z-index: -1;
+    text-align: left;
+    top: 1; }
+    .pictureItem .pictureDetail .detailLine {
+      margin-bottom: 16px; }
+    .pictureItem .pictureDetail .detailLink {
+      width: 100%;
+      color: white;
+      background-color: black;
+      border-radius: 2px;
+      padding: 5px; }
+  .pictureItem .picture {
+    height: 40vw;
+    width: 100%;
+    object-fit: cover; }
+    .pictureItem .picture:hover {
+      opacity: 0.3; }

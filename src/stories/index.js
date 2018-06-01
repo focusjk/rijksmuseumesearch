@@ -1,5 +1,6 @@
 import { Button, Welcome } from '@storybook/react/demo';
 
+import PictureItem from '../Components/PictureItem';
 import PictureResult from '../Components/PictureResult';
 import React from 'react';
 import SearchPanel from '../Components/SearchPanel';
@@ -28,6 +29,9 @@ storiesOf('SearchPanel', module)
 storiesOf('PictureResult', module)
   .add('PictureResult', () => (
     <PictureResult result={data} loading={false} keyword={'keyword'}/>
+  ))
+  .add('PctureItem', () => (
+    <div style={{width : '30%'}}><PictureItem item={data[1]} /></div>
   ));
 
   

@@ -21,31 +21,3 @@
     .picturePanel .header .smallKeyword {
       font-size: 2.5vw;
       display: inline; }
-  .picturePanel .pictureItem {
-    position: relative;
-    overflow: scroll;
-    font-size: 2vw; }
-    .picturePanel .pictureItem:hover .pictureDetail {
-      z-index: 1; }
-    .picturePanel .pictureItem:hover .picture {
-      opacity: 0.3; }
-    .picturePanel .pictureItem .pictureDetail {
-      margin: 1.5vw;
-      position: absolute;
-      z-index: -1;
-      text-align: left;
-      top: 1; }
-      .picturePanel .pictureItem .pictureDetail .detailLine {
-        margin-bottom: 16px; }
-      .picturePanel .pictureItem .pictureDetail .detailLink {
-        width: 100%;
-        color: white;
-        background-color: black;
-        border-radius: 2px;
-        padding: 5px; }
-    .picturePanel .pictureItem .picture {
-      height: 40vw;
-      width: 100%;
-      object-fit: cover; }
-      .picturePanel .pictureItem .picture:hover {
-        opacity: 0.3; }
