@@ -8,21 +8,17 @@ import styled from 'styled-components';
 const Item = styled.div`
     position: relative;
     overflow: hidden;
-    &:hover {
-        img { 
-            opacity: 0.3;
-        }
-        div {
-            z-index: 1;
-        }
-    }
 `;
 const ItemDetail = styled.div`
     margin: 1.5vw;
     position: absolute;
-    z-index: -1;
     text-align: left;
     top: 1;
+    opacity: 0;
+
+    ${Item}:hover & {
+        opacity: 1;
+    }
 `;
 const DetailLine = styled.div`
     font-size: 2vw;
@@ -41,6 +37,10 @@ const DetailPicture = styled.img`
     height: 40vw;
     width: 100%;
     object-fit: cover;
+
+    ${Item}:hover & {
+        opacity: 0.3;
+    }
 `;
 
 
