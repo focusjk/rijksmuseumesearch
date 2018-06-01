@@ -25,7 +25,7 @@ class App extends Component {
       <div className="App">
         <img 
           src="http://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/RIJKSMUSEUMLOGO_zwart_mw.jpg" 
-          style={{width: '40%', marginBottom: '30px'}} 
+          style={{width: '40%', margin: '0 0 5vw 0'}} 
         />
         <SearchPanel onChange={this.onChange} />
         <Result keyword={this.state.keyword} />
