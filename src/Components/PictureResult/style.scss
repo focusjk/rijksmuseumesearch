@@ -7,6 +7,7 @@
     grid-template-columns: 30% 30% 30%;
     grid-gap: 10px 5%;
     display: grid;
+    font-family: Courier;
     
     .header {
         grid-column-start: 1;
@@ -25,51 +26,6 @@
             font-size: 2.5vw;
             display: inline;
         }
-    }
-
-    .pictureItem {
-        position: relative;
-        overflow: scroll;
-        font-size: 2vw;
-        &:hover {
-            .pictureDetail{
-            z-index: 1;
-            }
-            .picture {
-                opacity: 0.3;
-            }
-        }
-        .pictureDetail { 
-            margin: 1.5vw;
-            position: absolute;
-            z-index: -1;
-            text-align: left;
-            top: 1;
-
-            .detailLine {
-                margin-bottom: 16px;
-            }
-
-            .detailLink {
-                width: 100%;
-                color: white;
-                background-color: black;
-                border-radius: 2px; 
-                padding: 5px;
-            }
-            
-        }
-
-        .picture {
-            height: 40vw;
-            width: 100%;
-            object-fit: cover;
-            &:hover {
-                opacity: 0.3;
-            }
-        }
-
-
     }
 
 

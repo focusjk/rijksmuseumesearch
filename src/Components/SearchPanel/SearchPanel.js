@@ -2,7 +2,12 @@ import './style.css';
 
 import React, { Component } from 'react';
 
+import PropTypes from 'prop-types'
+
 class SearchPanel extends Component {
+    static propsTypes = {
+        onChange: PropTypes.func
+    }
     constructor(props){
         super(props);
         this.onKeyDown = this.onKeyDown.bind(this);   

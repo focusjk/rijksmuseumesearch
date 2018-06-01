@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 
 import PictureResult from '../../Components/PictureResult';
+import PropTypes from 'prop-types';
 
 class Result extends Component {
+    static propsTypes = {
+        keyword: PropTypes.string,
+    }
     constructor(props) {
         super(props)
         this.state = {
