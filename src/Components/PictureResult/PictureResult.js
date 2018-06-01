@@ -3,28 +3,35 @@ import './style.css';
 import React, { Component } from 'react';
 
 import PictureItem from '../PictureItem';
+import PropTypes from 'prop-types'
 
 class PictureResult extends Component {
+    static propTypes = {
+        keyword : PropTypes.string,
+        loading : PropTypes.bool,
+        result : PropTypes.shape(),
+    }
     constructor(props){
         super(props)
     }
     render() {
+        const {keyword, loading, result} = this.props;
         return(
             <div className="picturePanel" >
                 <div className="header">
-                    <div className="keyword">{ this.props.keyword }</div>
+                    <div className="keyword">{ keyword }</div>
                     <div className="smallKeyword">
-                        { this.props.loading? ' ( loading )' : 
-                            this.props.keyword? this.props.result.length>1? ' ( ' + this.props.result.length + ` results )` : 
-                                ' ( ' + this.props.result.length + ` result )` :
+                        {loading? ' ( loading )' : 
+                            keyword? result.length>1? ' ( ' + result.length + ` results )` : 
+                                ' ( ' + result.length + ` result )` :
                             ''
                         }
                     </div>
                 </div>
                 {
-                    this.props.result.map((item) => {
+                    result.map((item) => {
                         return (
-                            <PictureItem item={item} />
+                            <PictureItem {...item} />
                         );
                     })
                 }
